@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
-    
- <div class="container" style="1200px"> 
+ <div class="container">
 <div class="row d-flex bd-highlight mb-3">
   <div class="form-group row m-0 p-0">
     <label for="input1" class="col-5 col-form-label">ワークの長さ</label>
     <div class="col-4" style="padding: 0;">
-      <input type="text" class="form-control" id="input1" style="text-align:right" v-model="length">
+      <input type="text" class="form-control" id="input1" style="text-align:right" v-model="length" v-validate="{pattern: /^[0-9a-zA-Z]*$/}">
+      <p v-if="validation.login.pattern">半角英数字のみ使用できます</p>
       <small id="passwordHelpInline1" class="text-muted float-right">
       cm
     </small>
@@ -30,10 +30,10 @@
     </div>
     </div>
     <br><br>
-    <p class="img_center">
+
 
     <image-viewer> </image-viewer>
-    </p>
+    
     <br><br>
     <div class="float-right">
       <button class="btn btn-outline-secondary mr-2 rounded-0" type="submit" key="button4" v-on:click="onclick4">保存</button>
@@ -43,8 +43,8 @@
       <button class="btn col-3 disabled mr-2 rounded-0 " type="submit" key="button5" v-on:click="onclick5"></button>
       <button class="btn col-3 disabled mr-2 rounded-0 " type="submit" key="button5" v-on:click="onclick5"></button>
       <button class="btn col-3 disabled mr-2 rounded-0 " type="submit" key="button5" v-on:click="onclick5"></button>
-    </div>
-    
+    </div>  
+     
   </div>
 </template>
 
@@ -79,6 +79,7 @@ export default {
     }
   }
 };
+
 
 </script>
 
