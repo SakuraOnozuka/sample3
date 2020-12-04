@@ -1,5 +1,10 @@
 # sample
 
+## 今後の修正内容
+・バリデーション
+・定規デザイン修正
+・画像の保存
+
 ## Project setup
 ```
 yarn install
