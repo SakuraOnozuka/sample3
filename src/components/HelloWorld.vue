@@ -5,8 +5,7 @@
   <div class="form-group row m-0 p-0">
     <label for="input1" class="col-5 col-form-label">ワークの長さ</label>
     <div class="col-4" style="padding: 0;">
-      <input type="text" class="form-control" id="input1" style="text-align:right" v-model="length" v-validate="{pattern: /^[0-9a-zA-Z]*$/}">
-      <p v-if="validation.login.pattern">半角英数字のみ使用できます</p>
+      <input type="text" class="form-control" id="input1" style="text-align:right" v-model="length">
       <small id="passwordHelpInline1" class="text-muted float-right">
       cm
     </small>

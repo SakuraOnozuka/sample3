@@ -73,7 +73,7 @@ export default {
       const canvas = document.getElementById("canvas")
       const context = canvas.getContext("2d")
 
-      context.fillStyle = 'rgb(256,256,256)'
+      context.fillStyle = 'rgb(200,50,60)'
       context.fillRect(sx - 10, sy, this.canvasWidth, 60)
 
       // 画面端まで定規を描画
@@ -92,9 +92,17 @@ export default {
           context.lineTo(x, sy + 10)
         }
 
+        if(i%2===0){
+        context.fillStyle = "white"
+        context.fillText(i/2, x, sy+50)
+        }
+
         context.stroke()
+        context.strokeStyle="white"
+
       }
     },
+  
     updateCanvasSize() {
       // canvasの外側のdiv要素を取得
       const container = document.getElementById("image-viewer")
